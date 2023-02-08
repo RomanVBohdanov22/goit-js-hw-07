@@ -6,7 +6,7 @@ console.log(galleryItems);
 
 const gallery = document.querySelector('.gallery');
 
-const imagesMurkup = galleryItems.map((
+const galleryMurkup = galleryItems.map((
     { 
         preview,
         original,
@@ -25,8 +25,8 @@ const imagesMurkup = galleryItems.map((
     </div>
 `; }).join("");
 
-console.log(imagesMurkup);
-gallery.insertAdjacentHTML("afterbegin", imagesMurkup);
+console.log(galleryMurkup);
+gallery.insertAdjacentHTML("afterbegin", galleryMurkup);
 
 
 /*
