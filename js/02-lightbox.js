@@ -11,8 +11,8 @@ const gallery = document.querySelector('.gallery');
 */
 const galleryMurkup = galleryItems
   .map(({ preview, original, description }) => {
-    return `<li class="gallery__item">
-    <a class="gallery__link" href="${original}">
+    return `<li>
+    <a class="gallery__item" href="${original}">
         <img
             class="gallery__image"
             src="${preview}"
@@ -25,4 +25,6 @@ const galleryMurkup = galleryItems
   })
     .join('');
   
-    gallery.insertAdjacentHTML('afterbegin', galleryMurkup);
+gallery.insertAdjacentHTML('afterbegin', galleryMurkup);
+
+var lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250,});
