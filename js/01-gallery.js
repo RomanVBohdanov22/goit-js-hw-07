@@ -2,8 +2,7 @@ import { galleryItems } from './gallery-items.js';
 
 // Change code below this line
 
-//console.log(galleryItems);
-//import * as basicLightbox from 'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js'; //basiclightbox
+console.log(galleryItems);
 
 const gallery = document.querySelector('.gallery');
 
@@ -32,7 +31,7 @@ function basicLightboxModal(event) {
     event.preventDefault();
     if (event.target.nodeName !== "IMG") return;
     const selectedImg = event.target.dataset.source;
-    console.log(selectedImg);
+    //console.log(selectedImg);
     const instance = basicLightbox.create(`<img src=${selectedImg} width="800" height="600">`);
     instance.show();   
 }
@@ -40,7 +39,7 @@ function basicLightboxModal(event) {
 
 
 
-
+//import * as basicLightbox from 'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js'; //basiclightbox
 /*
 https://www.jsdelivr.com/package/npm/basiclightbox?path=dist
 */
