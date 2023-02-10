@@ -25,30 +25,19 @@ const galleryMurkup = galleryItems
 
 //console.log(galleryMurkup);
 gallery.insertAdjacentHTML('afterbegin', galleryMurkup);
-const dataSourceQ = "data-source=".length;
-//console.log(dataSourceQ);
 
-//instance.show();
- 
 gallery.addEventListener('click', basicLightboxModal);
 
 function basicLightboxModal(event) {
     event.preventDefault();
     if (event.target.nodeName !== "IMG") return;
-  //if (!event.target.classList.contains('gallery__image')) return;
-    //let originalSrc = event.target.attributes[2];
-    //originalSrc= originalSrc.slice(12, originalSrc.length);
-    //console.log(originalSrc);
-    const instance = basicLightbox.create(`
-    <div class="modal">
-        <p>
-            Your first lightbox with just a few lines of code.
-            Yes, it's really that simple.
-        </p>
-    </div>
-`);
-    instance.show();
+    const selectedImg = event.target.dataset.source;
+    console.log(selectedImg);
+    const instance = basicLightbox.create(`<img src=${selectedImg} width="800" height="600">`);
+    instance.show();   
 }
+
+
 
 
 
@@ -63,3 +52,22 @@ const instance = basicLightbox.create(`
 `)
 
 instance.show()*/
+
+
+ //if (!event.target.classList.contains('gallery__image')) return;
+    //let originalSrc = event.target.attributes[2];
+    //originalSrc= originalSrc.slice(12, originalSrc.length);
+    //console.log(originalSrc);
+
+
+    ////
+
+        /*const instance = basicLightbox.create(`
+    <div class="modal">
+    <img src=${selectedImg} width="800" height="600">
+        <p>
+            Your first lightbox with just a few lines of code.
+            Yes, it's really that simple.
+        </p>
+    </div>
+`);*/
