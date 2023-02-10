@@ -4,11 +4,7 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems);
 
 const gallery = document.querySelector('.gallery');
-/*
-<a class="gallery__item" href="large-image.jpg">
-  <img class="gallery__image" src="small-image.jpg" alt="Image description" />
-</a>
-*/
+
 const galleryMurkup = galleryItems
   .map(({ preview, original, description }) => {
     return `<li>
